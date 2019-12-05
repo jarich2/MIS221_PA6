@@ -1,6 +1,6 @@
 ﻿namespace MIS221_PA6_New
 {
-    partial class Form1
+    partial class frmCWID
     {
         /// <summary>
         /// Required designer variable.
@@ -28,21 +28,72 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.lblCWID = new System.Windows.Forms.Label();
+            this.txtCWID = new System.Windows.Forms.TextBox();
+            this.btnOK = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // Form1
+            // lblCWID
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.lblCWID.AutoSize = true;
+            this.lblCWID.Location = new System.Drawing.Point(45, 56);
+            this.lblCWID.Name = "lblCWID";
+            this.lblCWID.Size = new System.Drawing.Size(233, 32);
+            this.lblCWID.TabIndex = 0;
+            this.lblCWID.Text = "Enter your CWID:";
+            // 
+            // txtCWID
+            // 
+            this.txtCWID.Location = new System.Drawing.Point(298, 61);
+            this.txtCWID.Name = "txtCWID";
+            this.txtCWID.Size = new System.Drawing.Size(281, 39);
+            this.txtCWID.TabIndex = 1;
+            // 
+            // btnOK
+            // 
+            this.btnOK.Location = new System.Drawing.Point(298, 133);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(121, 49);
+            this.btnOK.TabIndex = 2;
+            this.btnOK.Text = "OK";
+            this.btnOK.UseVisualStyleBackColor = true;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(453, 133);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(126, 49);
+            this.btnClose.TabIndex = 3;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
+            // 
+            // frmCWID
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(628, 295);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnOK);
+            this.Controls.Add(this.txtCWID);
+            this.Controls.Add(this.lblCWID);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Name = "frmCWID";
+            this.Text = "CWID";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label lblCWID;
+        private System.Windows.Forms.TextBox txtCWID;
+        private System.Windows.Forms.Button btnOK;
+        private System.Windows.Forms.Button btnClose;
     }
 }
 

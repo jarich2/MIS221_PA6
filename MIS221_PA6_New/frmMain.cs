@@ -10,14 +10,27 @@ using System.Windows.Forms;
 
 namespace MIS221_PA6_New
 {
-    public partial class frmCWID : Form
+    public partial class frmMain : Form
     {
-        public frmCWID()
+        string cwid;
+
+        public frmMain(string tempCwid)
         {
+            this.cwid = tempCwid;
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TextBox3_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -26,18 +39,5 @@ namespace MIS221_PA6_New
         {
             this.Close();
         }
-       private void BtnOK_Click(object sender, EventArgs e)
-       {
-            this.Hide();
-            frmMain myForm = new frmMain(txtCWID.Text);
-            if (myForm.ShowDialog() == DialogResult.OK)
-            {
-
-            }
-            else
-            {
-                this.Close();
-            }
-       }
     }
 }
