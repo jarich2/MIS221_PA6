@@ -52,9 +52,10 @@ namespace MIS221_PA6_New
         {
             Book myBook = (Book)lstBooks.SelectedItem;
 
-            txtTitleData.Text = myBook.title;
+            textBox1.Text = myBook.title;
             txtAuthorData.Text  = myBook.author;
-            txtGenre.Text  = myBook.genre;
+            txtGenreData.Text  = myBook.genre;
+            txtisbnData.Text = myBook.isbn;
             txtCopiesData.Text = myBook.copies.ToString();
             txtLengthData.Text = myBook.length.ToString();
 

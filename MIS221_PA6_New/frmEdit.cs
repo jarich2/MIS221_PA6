@@ -22,11 +22,28 @@ namespace MIS221_PA6_New
             cwid = tempCwid;
             mode = tempMode;
             InitializeComponent();
+            pbCover.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
         private void FrmEdit_Load(object sender, EventArgs e)
         {
+            if(mode == "edit")
+            {
+                textBox1.Text = myBook.title;
+                txtAuthorData.Text = myBook.author;
+                txtGenreData.Text = myBook.genre;
+                txtCopiesData.Text = myBook.copies.ToString();
+                txtisbnData.Text = myBook.isbn;
+                txtCoverData.Text = myBook.cover;
+                txtLengthData.Text = myBook.length.ToString();
 
+                pbCover.Load(myBook.cover);
+            }
+        }
+
+        private void BtnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

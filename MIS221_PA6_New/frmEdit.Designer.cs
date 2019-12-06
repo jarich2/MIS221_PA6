@@ -221,6 +221,7 @@
             this.btnClose.TabIndex = 32;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
             // frmEdit
             // 
