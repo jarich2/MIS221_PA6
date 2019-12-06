@@ -45,5 +45,22 @@ namespace MIS221_PA6_New
         {
             this.Close();
         }
+
+        private void BtnSave_Click(object sender, EventArgs e)
+        {
+            myBook.title = textBox1.Text;
+            myBook.author = txtAuthorData.Text;
+            myBook.genre = txtGenreData.Text;
+            myBook.copies = int.Parse(txtCopiesData.Text);
+            myBook.isbn = txtisbnData.Text;
+            myBook.cover = txtCoverData.Text;
+            myBook.length = int.Parse(txtLengthData.Text);
+            myBook.cwid = cwid;
+
+            BookFile.SaveBook(myBook, cwid, mode);
+
+            MessageBox.Show("Content was saved", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
+        }
     }
 }
