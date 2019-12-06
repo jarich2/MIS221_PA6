@@ -37,12 +37,12 @@
             this.txtGenre = new System.Windows.Forms.TextBox();
             this.lblGenre = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtGenreData = new System.Windows.Forms.TextBox();
             this.txtCopiesData = new System.Windows.Forms.TextBox();
             this.lblCopies = new System.Windows.Forms.Label();
             this.txtisbnData = new System.Windows.Forms.TextBox();
             this.lblisbn = new System.Windows.Forms.Label();
-            this.txtLength = new System.Windows.Forms.TextBox();
+            this.txtLengthData = new System.Windows.Forms.TextBox();
             this.lblLength = new System.Windows.Forms.Label();
             this.lstBooks = new System.Windows.Forms.ListBox();
             this.pbCover = new System.Windows.Forms.PictureBox();
@@ -130,12 +130,13 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Genre";
             // 
-            // textBox2
+            // txtGenreData
             // 
-            this.textBox2.Location = new System.Drawing.Point(328, 192);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(183, 39);
-            this.textBox2.TabIndex = 5;
+            this.txtGenreData.Location = new System.Drawing.Point(328, 192);
+            this.txtGenreData.Name = "txtGenreData";
+            this.txtGenreData.Size = new System.Drawing.Size(183, 39);
+            this.txtGenreData.TabIndex = 5;
+            this.txtGenreData.TextChanged += new System.EventHandler(this.TextBox3_TextChanged);
             // 
             // txtCopiesData
             // 
@@ -170,12 +171,12 @@
             this.lblisbn.TabIndex = 8;
             this.lblisbn.Text = "ISBN";
             // 
-            // txtLength
+            // txtLengthData
             // 
-            this.txtLength.Location = new System.Drawing.Point(328, 424);
-            this.txtLength.Name = "txtLength";
-            this.txtLength.Size = new System.Drawing.Size(183, 39);
-            this.txtLength.TabIndex = 11;
+            this.txtLengthData.Location = new System.Drawing.Point(328, 424);
+            this.txtLengthData.Name = "txtLengthData";
+            this.txtLengthData.Size = new System.Drawing.Size(183, 39);
+            this.txtLengthData.TabIndex = 11;
             // 
             // lblLength
             // 
@@ -194,6 +195,7 @@
             this.lstBooks.Name = "lstBooks";
             this.lstBooks.Size = new System.Drawing.Size(232, 388);
             this.lstBooks.TabIndex = 12;
+            this.lstBooks.SelectedIndexChanged += new System.EventHandler(this.LstBooks_SelectedIndexChanged);
             // 
             // pbCover
             // 
@@ -211,6 +213,7 @@
             this.btnRent.TabIndex = 14;
             this.btnRent.Text = "Rent";
             this.btnRent.UseVisualStyleBackColor = true;
+            this.btnRent.Click += new System.EventHandler(this.BtnRent_Click);
             // 
             // btnReturn
             // 
@@ -220,6 +223,7 @@
             this.btnReturn.TabIndex = 15;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.Click += new System.EventHandler(this.BtnReturn_Click);
             // 
             // btnNew
             // 
@@ -247,6 +251,7 @@
             this.btnDelete.TabIndex = 18;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // btnClose
             // 
@@ -271,13 +276,13 @@
             this.Controls.Add(this.btnRent);
             this.Controls.Add(this.pbCover);
             this.Controls.Add(this.lstBooks);
-            this.Controls.Add(this.txtLength);
+            this.Controls.Add(this.txtLengthData);
             this.Controls.Add(this.lblLength);
             this.Controls.Add(this.txtisbnData);
             this.Controls.Add(this.lblisbn);
             this.Controls.Add(this.txtCopiesData);
             this.Controls.Add(this.lblCopies);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtGenreData);
             this.Controls.Add(this.txtGenre);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblGenre);
@@ -288,7 +293,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTitle);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "frmMain";
             this.Text = "Audio Book Rental System";
             this.Load += new System.EventHandler(this.FrmMain_Load);
@@ -309,12 +314,12 @@
         private System.Windows.Forms.TextBox txtGenre;
         private System.Windows.Forms.Label lblGenre;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtGenreData;
         private System.Windows.Forms.TextBox txtCopiesData;
         private System.Windows.Forms.Label lblCopies;
         private System.Windows.Forms.TextBox txtisbnData;
         private System.Windows.Forms.Label lblisbn;
-        private System.Windows.Forms.TextBox txtLength;
+        private System.Windows.Forms.TextBox txtLengthData;
         private System.Windows.Forms.Label lblLength;
         private System.Windows.Forms.ListBox lstBooks;
         private System.Windows.Forms.PictureBox pbCover;
