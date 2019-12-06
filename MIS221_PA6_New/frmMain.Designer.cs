@@ -88,6 +88,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(183, 39);
             this.textBox1.TabIndex = 1;
+            this.textBox1.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
             // 
             // txtAuthorData
             // 
@@ -95,6 +96,7 @@
             this.txtAuthorData.Name = "txtAuthorData";
             this.txtAuthorData.Size = new System.Drawing.Size(183, 39);
             this.txtAuthorData.TabIndex = 3;
+            this.txtAuthorData.TextChanged += new System.EventHandler(this.TxtAuthorData_TextChanged);
             // 
             // lblAuthor
             // 
@@ -233,6 +235,7 @@
             this.btnNew.TabIndex = 16;
             this.btnNew.Text = "New";
             this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.BtnNew_Click);
             // 
             // btnEdit
             // 
@@ -242,6 +245,7 @@
             this.btnEdit.TabIndex = 17;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
             // btnDelete
             // 

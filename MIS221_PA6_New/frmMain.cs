@@ -99,5 +99,43 @@ namespace MIS221_PA6_New
                 LoadList();
             }
         }
+
+        private void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        
+        private void TxtAuthorData_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnEdit_Click(object sender, EventArgs e)
+        {
+            Book myBook = (Book)lstBooks.SelectedItem;
+            frmEdit myForm = new frmEdit(myBook, "edit", cwid);
+            if(myForm.ShowDialog() == DialogResult.OK)
+            {
+
+            }
+            else
+            {
+                LoadList();
+            }
+        }
+
+        private void BtnNew_Click(object sender, EventArgs e)
+        {
+            Book myBook = new Book();
+            frmEdit myForm = new frmEdit(myBook, "new", cwid);
+            if (myForm.ShowDialog() == DialogResult.OK)
+            {
+
+            }
+            else
+            {
+                LoadList();
+            }
+        }
     }
 }
