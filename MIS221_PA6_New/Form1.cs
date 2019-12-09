@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace MIS221_PA6_New
 {
+    //opening part where the user inputs the CWID
     public partial class frmCWID : Form
     {
         public frmCWID()

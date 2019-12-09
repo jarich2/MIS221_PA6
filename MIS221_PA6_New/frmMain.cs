@@ -50,6 +50,8 @@ namespace MIS221_PA6_New
 
         private void LstBooks_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //creates a new object called myBook
+
             Book myBook = (Book)lstBooks.SelectedItem;
 
             textBox1.Text = myBook.title;
