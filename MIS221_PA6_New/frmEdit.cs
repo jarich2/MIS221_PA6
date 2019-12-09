@@ -10,6 +10,8 @@ using System.Windows.Forms;
 
 namespace MIS221_PA6_New
 {
+
+    //handles the edit section
     public partial class frmEdit : Form
     {
         private Book myBook;
@@ -29,6 +31,7 @@ namespace MIS221_PA6_New
         {
             if(mode == "edit")
             {
+                //creates new book and allows for textbox to display data
                 textBox1.Text = myBook.title;
                 txtAuthorData.Text = myBook.author;
                 txtGenreData.Text = myBook.genre;
@@ -43,6 +46,7 @@ namespace MIS221_PA6_New
 
         private void BtnClose_Click(object sender, EventArgs e)
         {
+            //simple close command
             this.Close();
         }
 
@@ -56,6 +60,8 @@ namespace MIS221_PA6_New
             myBook.cover = txtCoverData.Text;
             myBook.length = int.Parse(txtLengthData.Text);
             myBook.cwid = cwid;
+
+            //allows to save changes made to the movie to carry over and save
 
             BookFile.SaveBook(myBook, cwid, mode);
 
