@@ -9,7 +9,7 @@ namespace MIS221_PA6_New
     class Book
     {
    
-
+        //getters and setters in a much easier format than we had to do for PA5
         public String cwid { get; set; }
         public String isbn { get; set; }
         public String title { get; set; }
@@ -22,6 +22,8 @@ namespace MIS221_PA6_New
 
         public Book(string cwid, string isbn, string title, string author, string cover, string genre, int length, int copies, string id)
         {
+            //constructor
+
             this.cwid = cwid;
             this.isbn = isbn;
             this.title = title;

@@ -37,6 +37,7 @@ namespace MIS221_PA6_New
 
         public static void SaveBook(Book myBook, string cwid, string mode)
         {
+            //json component which goes and gets data from a server
             var content = new StringContent(JsonConvert.SerializeObject(myBook).ToString(), Encoding.UTF8, "application/json");
             string url;
             if (mode == "edit")
